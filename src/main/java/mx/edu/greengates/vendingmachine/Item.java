@@ -1,10 +1,10 @@
 package mx.edu.greengates.vendingmachine;
 
 public class Item {
-    public int id;
-    public String name;
-    public double price;
-    public int quantity;
+    private int id;
+    private String name;
+    private double price;
+    private int quantity;
 
     public Item(int id, String name, double price, int quantity) {
         this.id = id;
@@ -27,6 +27,18 @@ public class Item {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setPrice(double price) {
+        if (price > 0) {
+            this.price = price;
+        }
+    }
+
+    public void setQuantity(int quantity) {
+        if (quantity >= 0) {
+            this.quantity = quantity;
+        }
     }
 
     public String toString() {
